@@ -15,7 +15,6 @@
   padding: 18px 0;
 }
 
-/* Left brand */
 .brand {
   justify-self: start;
   font-weight: 800;
@@ -23,7 +22,6 @@
   font-size: 1.05rem;
 }
 
-/* Center nav */
 .nav {
   justify-self: center;
   display: flex;
@@ -31,7 +29,6 @@
   align-items: center;
 }
 
-/* Make links NOT look like links */
 .nav__item,
 .nav__item:visited,
 .brand,
@@ -40,7 +37,6 @@
   text-decoration: none;
 }
 
-/* Nav link look (clean, like the nice header) */
 .nav__item {
   font-size: .98rem;
   font-weight: 600;
@@ -57,7 +53,6 @@
   border-color: rgba(255,255,255,.10);
 }
 
-/* Right actions */
 .topbar__actions {
   justify-self: end;
   display: flex;
@@ -65,7 +60,6 @@
   align-items: center;
 }
 
-/* Mobile stacking */
 @media (max-width: 900px) {
   .topbar__inner {
     grid-template-columns: 1fr;
