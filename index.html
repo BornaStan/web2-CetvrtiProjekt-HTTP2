@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="hr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LAB4 - HTTP2</title>
+
+  <!-- Namjerno: puno malih CSS datoteka -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/typography.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/badges.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/gallery.css">
+  <link rel="stylesheet" href="css/table.css">
+  <link rel="stylesheet" href="css/footer.css">
+  <link rel="stylesheet" href="css/utilities.css">
+  <link rel="stylesheet" href="css/print.css">
+  <link rel="stylesheet" href="css/stats.css">
+
+  <!-- Minimalni JS moduli (namjerno odvojeni) -->
+  <script defer src="js/theme-toggle.js"></script>
+  <script defer src="js/counter.js"></script>
+  <script defer src="js/info.js"></script>
+  <script defer src="js/view-toggle.js"></script>
+  <script defer src="js/stats.js"></script>
+</head>
+
+<body>
+  <header class="topbar">
+  <div class="wrap topbar__inner">
+    <a class="brand" href="#overview" aria-label="LAB4 home">LAB4</a>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#overview" class="nav__item">Overview</a>
+      <a href="#stats" class="nav__item">Stats</a>
+      <a href="#gallery" class="nav__item">Gallery</a>
+      <a href="#notes" class="nav__item">Notes</a>
+    </nav>
+
+    <div class="topbar__actions">
+      <button id="themeBtn" class="btn btn--ghost" type="button">Theme</button>
+    </div>
+  </div>
+</header>
+
+
+  <main class="wrap">
+    <section id="overview" class="panel">
+      <div class="panel__head">
+        <h1>HTTP/2 demonstracija</h1>
+      </div>
+
+      <p class="muted">
+        Značajne razlike HTTP/2 u odnosu na HTTP/1.1:<br>
+        HTTP/2 je binarni protokol, dok HTTP/1.1 podatke prenosi kao nizove znakova<br>
+        Omogućeno je isprepletanje (multipleksiranje) više tokova podataka (data
+        streams) preko jedne konekcije: klijent može poslati više zahtjeva, a poslužitelj
+        može odgovarati u bilo kojem redoslijedu, onda kad odgovori postanu spremni<br>
+        Uvedena je kompresija zaglavlja poruka koja uvelike sprječava redundantnost
+        zaglavlja koja je prisutna kod ranijih verzija HTTP protokola
+      </p>
+
+      <div><h2> Pointless button</h2></div>
+
+      <div class="badges">
+        <button id="countBtn" class="btn" type="button">CLICK ME!</button>
+      </div>
+
+      <p class="muted small" id="clickInfo">button not clicked yet</p>
+
+      <div class="grid2">
+        <div class="card">
+          <h2>Što mjerimo</h2>
+          <ul class="list">
+            <li>Load vrijeme (Network donja traka)</li>
+            <li>Protocol stupac: <b>h2</b> vs <b>http/1.1</b></li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Kako testirati</h2>
+          <ol class="list">
+            <li>F12 -> Network</li>
+            <li>Preserve log -> ON</li>
+            <li>Hard reload (Ctrl+Shift+R)</li>
+            <li>Export HAR (http2.har / no_http2.har)</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section id="stats" class="section stats">
+      <h2>Stats</h2>
+      <div class="stats__grid">
+        <div class="stat">
+          <div class="stat__num" data-target="46">0</div>
+          <div class="stat__label">resursa</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" data-target="24">0</div>
+          <div class="stat__label">slika</div>
+        </div>
+        <div class="stat">
+          <div class="stat__num" data-target="18">0</div>
+          <div class="stat__label">css+js</div>
+        </div>
+        <div class="stat">
+          <div id="loadTime" data-target="0">0</div>
+          <div class="stat__label">Vrijeme učitavanja (ms)</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="panel">
+      <div class="panel__head">
+        <h2>Gallery</h2>
+        <span class="hint">24 slike</span>
+        <span><button id="viewBtn" class="btn" type="button">view: grid</button></span>
+
+      </div>
+
+      <div class="gallery" id="galleryGrid" data-view="grid">
+        <img src="img/i01.png" alt="p01">
+        <img src="img/i02.png" alt="p02">
+        <img src="img/i03.png" alt="p03">
+        <img src="img/i04.png" alt="p04">
+        <img src="img/i05.png" alt="p05">
+        <img src="img/i06.png" alt="p06">
+        <img src="img/i07.png" alt="p07">
+        <img src="img/i08.png" alt="p08">
+        <img src="img/i09.png" alt="p09">
+        <img src="img/i10.png" alt="p10">
+        <img src="img/i11.png" alt="p11">
+        <img src="img/i12.png" alt="p12">
+        <img src="img/i13.png" alt="p13">
+        <img src="img/i14.png" alt="p14">
+        <img src="img/i15.png" alt="p15">
+        <img src="img/i16.png" alt="p16">
+        <img src="img/i17.png" alt="p16">
+        <img src="img/i18.png" alt="p16">
+        <img src="img/i19.png" alt="p16">
+        <img src="img/i20.png" alt="p16">
+        <img src="img/i21.png" alt="p16">
+        <img src="img/i22.png" alt="p16">
+        <img src="img/i23.png" alt="p16">
+        <img src="img/i24.png" alt="p16">
+      </div>
+    </section>
+
+    <section id="notes" class="panel">
+      <div class="panel__head">
+        <h2>Notes</h2>
+      </div>
+
+      <div class="card">
+        <p>
+          Ova stranica je dizajnirana s više resursa kako bi se usporedila razlika između korištenja HTTP/1.x i HTTP/2 protokola.
+        </p>
+        <p> Koristio se nginx web poslužitelj sa self-signed SSL certifikatom.</p>
+      </div>
+      <div class="card">
+        <h2>Sadržaj nginx.conf datoteke kojom uključujemo podršku za HTTP/2 protokol.</h2>
+        <pre>
+        
+        
+          #HTTPS server
+            server {
+            listen       443 ssl http2;
+            server_name  localhost;
+
+            ssl_certificate      ssl/server.crt;
+            ssl_certificate_key  ssl/server.key;
+
+            ssl_session_cache    shared:SSL:1m;
+            ssl_session_timeout  5m;
+
+            ssl_ciphers  HIGH:!aNULL:!MD5;
+            ssl_prefer_server_ciphers  on;
+
+            location / {
+                root   html;
+                index  index.html;
+            }
+          }
+        </pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>LAB4</span>
+      <span class="muted">Borna Stanković, WEB2 2025/2026</span>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,12 @@
+.badges { 
+    display:flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.badge {
+    padding: 4px 10px;
+    border-radius: 999px;
+    border:1px solid var(--border);
+    background: rgba(122,167,255,.10);
+}
+.hint { color: var(--muted); font-size: .9rem; }

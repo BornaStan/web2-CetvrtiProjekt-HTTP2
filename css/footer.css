@@ -1,0 +1,6 @@
+.footer {
+    border-top: 1px solid var(--border);
+    margin-top: 24px;
+    padding: 16px 0;
+}
+.footer__inner { display:flex; justify-content: space-between; gap: 10px; }

@@ -1,0 +1,16 @@
+.t {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 14px;
+}
+.t th, .t td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+}
+.t th {
+    text-align:left;
+    color: var(--muted);
+    font-weight: 600;
+}
+.t tr:hover td { background: rgba(255,255,255,.04); }

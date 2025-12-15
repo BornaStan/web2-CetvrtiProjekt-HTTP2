@@ -1,0 +1,14 @@
+body {
+    font-family: system-ui, Arial, sans-serif;
+    line-height: 1.5;
+}
+h1 {
+    font-size: 1.6rem;
+    margin: 0;
+}
+h2 {
+    font-size: 1.15rem;
+    margin: 0 0 8px;
+}
+p { margin: 10px 0; }
+.small { font-size: .9rem; }

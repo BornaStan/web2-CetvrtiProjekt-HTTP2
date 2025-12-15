@@ -1,0 +1,4 @@
+@media print{
+  .topbar, .footer { display:none; }
+  body { background: white; color: black; }
+}

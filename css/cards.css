@@ -1,0 +1,12 @@
+.card {
+    padding: 14px;
+    border:1px solid var(--border);
+    border-radius: 14px;
+    background: rgba(0,0,0,.18);
+}
+.list {
+    margin: 8px 0 0;
+    padding-left: 18px;
+    color: var(--muted);
+}
+.list li { margin: 6px 0; }

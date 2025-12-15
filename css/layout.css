@@ -1,0 +1,25 @@
+.wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 0 18px;
+}
+.panel {
+    margin: 20px 0;
+    padding: 18px;
+    border:1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+}
+.panel__head {
+    display:flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+.grid2 {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+@media (max-width: 900px){ .grid2 { grid-template-columns: 1fr; } }

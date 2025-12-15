@@ -1,0 +1,22 @@
+.stats__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+.stat {
+    padding: 16px;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+    text-align: center;
+}
+.stat__num {
+    font-size: 2rem;
+    font-weight: 800;
+}
+#loadTime {
+    font-size: 2rem;
+    font-weight: 800;
+}
+.stat__label { color: var(--muted); }
+@media (max-width: 900px) { .stats__grid { grid-template-columns: 1fr; } }
